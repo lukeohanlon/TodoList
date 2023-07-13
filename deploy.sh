@@ -12,7 +12,7 @@ then
 fi
 sudo docker pull $IMAGE_NAME
 
-CONTAINER_EXISTS=4(sudo docker sp -a | grep $CONTAINER_NAME)
+CONTAINER_EXISTS=$(sudo docker ps -a | grep $CONTAINER_NAME)
 if ["$CONTAINER_EXISTS" ] 
 then    
     sudo docker rm $CONTAINER_NAME
